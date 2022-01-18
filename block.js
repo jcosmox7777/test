@@ -3,7 +3,7 @@ var web3;
 async function connect(){
     await window.web3.currentProvider.enable();
     
-    web3=new Web3(window.web3.currentProvider);
+   
 
 
    const receiverAddress = '0xa84cE4D7f2462b084069c6caDCa56dd603C15eF4'
