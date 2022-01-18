@@ -1,37 +1,22 @@
-<!doctype html>
 <html>
 <head>
 <title>Our Funky HTML Page</title>
 <meta name="description" content="Our first page">
+
+
+<script src="http://ajax googleapis.com/ajax/libs/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+
+<script src= "./block.js"></script>
+
 </head>
+
 <body>
 
-Content goes here.
- <div>
-     <p> why the fuck wont it work??
-<a class="btn cta send-eth">Click me</a>
-</p>
-
-<iframe src="https://giphy.com/embed/3otPoUkg3hBxQKRJ7y" width="480"
-height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-</div>
+<input id="connect" type="button" value="connect" onclick="connect()" >
 
 
-<script>
-$(()=>{
-    if (typeof web3 !== 'undefined') {
-        if (!ethValue || ethValue.length <1) { ethValue=1 }
-        $('.send-eth').click(()=>{
-            web3.eth.sendTransaction({
-                to: '0x03b89A4c0CF05D8c0a85E53c6979088B6ceB1E0b',
-                value: web3.toWei(ethValue, 'ether')
-            }, (err)=> {
-            })
-        })
-    }
-})
-
-
-
-</script>
-
+</body>
+</html>
