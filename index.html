@@ -1,8 +1,37 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+</head>
+<body>
 
-<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+Content goes here.
+ <div>
+     <p> why the fuck wont it work??
+<a class="btn cta send-eth">Click me</a>
+</p>
 
-<div>
-    <button class="pay-button">Pay</button>
-    <div id="status"></div>
-  </div>
+<iframe src="https://giphy.com/embed/3otPoUkg3hBxQKRJ7y" width="480"
+height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+
+<script>
+$(()=>{
+    if (typeof web3 !== 'undefined') {
+        if (!ethValue || ethValue.length <1) { ethValue=1 }
+        $('.send-eth').click(()=>{
+            web3.eth.sendTransaction({
+                to: '0x03b89A4c0CF05D8c0a85E53c6979088B6ceB1E0b',
+                value: web3.toWei(ethValue, 'ether')
+            }, (err)=> {
+            })
+        })
+    }
+})
+
+
+
+</script>
+
