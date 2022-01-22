@@ -1,42 +1,4 @@
-function copytextid(elementId) {
 
-// Create a "hidden" input
-var aux = document.createElement("input");
-
-// Assign it the value of the specified element
-aux.setAttribute("value", document.getElementById(elementId).innerHTML);
-
-// Append it to the body
-document.body.appendChild(aux);
-
-// Highlight its content
-aux.select();
-
-// Copy the highlighted text
-document.execCommand("copy");
-   
-
-// Remove it from the body
-document.body.removeChild(aux);
-        /* $.toast({
-            heading: 'Copied',
-            position: 'top-right',
-            loaderBg:'#ff6849',
-            icon: 'success',
-            hideAfter: 3500, 
-            stack: 10
-          }); */
-		  alert("Text Copied sucessfully \n"+ aux.value);
-		
-}
-
-var bnbPrice = $('#bnbprice').html();
-
-
-						
-						
-
-//console.log($('#bnbprice').html());
 
 const contract_address = "0xe9e7cea3dedca5984780bafc599bd69add087d56";
 	const abi=  [
